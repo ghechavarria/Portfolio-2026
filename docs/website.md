@@ -1,24 +1,35 @@
 # Portfolio Homepage
 
-## Files
-- `index.html` — single-page portfolio aligned with `docs/resume.md`
-- `styles.css` — dark/light theme, waves, timeline, skill pills, project cards, mobile nav
-- `docs/resume.md` — canonical resume content used by the site
+React + Vite single-page portfolio aligned with `docs/resume.md`.
 
-## Sections
-1. **Hero** — name, syntax-colored role line, subtitle, CTAs, animated waves
-2. **About** — ERP/developer bio with portrait placeholder
-3. **Skills** — languages, systems, and certifications as pill tags
-4. **Experience** — vertical timeline with education block
-5. **Projects** — hackathon builds from prior portfolio (BeBrave, Mathwae, inRecycle, Whack-A-Jerge)
-6. **Contact** — email and social links
-7. **Footer** — gradient wave with GitHub, LinkedIn, and email
+## Stack
+- React 19
+- Vite 6
+- Plain CSS (`src/index.css`)
 
-## Design notes
-- Inspired by [ghechavarria.netlify.app](https://ghechavarria.netlify.app) (purple CTAs, project cards) and [gracie.cloud](https://gracie.cloud) (waves, single-page layout, syntax role line)
-- Uses local SVG assets from `assets/` for section icons
-- Dark mode default with persisted light/dark toggle
-- Add `assets/me.png` and swap the portrait placeholder in `index.html` when ready
+## Project structure
+- `index.html` — Vite entry HTML
+- `src/main.jsx` — React bootstrap
+- `src/App.jsx` — page layout
+- `src/index.css` — global styles (dark/light theme, waves, timeline, cards)
+- `src/data/portfolioData.js` — resume content used by components
+- `src/components/` — Topbar, Hero, About, Skills, Experience, Projects, Contact, Footer
+- `src/hooks/useTheme.js` — persisted dark/light theme toggle
+- `public/assets/` — SVG icons
 
-## Local preview
-Open `index.html` in a browser or serve the folder with any static file server.
+## Commands
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build to dist/
+npm run preview  # preview production build
+```
+
+## Deployment
+Build with `npm run build` and deploy the `dist/` folder (Netlify, Vercel, GitHub Pages, etc.).
+
+## Content updates
+Edit `src/data/portfolioData.js` or `docs/resume.md`, then mirror changes in the data file.
+
+## Portrait image
+Add `public/assets/me.png` and replace the `GH` placeholder in `src/components/About.jsx` with an `<img>` when ready.
