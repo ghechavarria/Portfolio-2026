@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  VITE_PROFILE_PHOTO_URL = "/.netlify/functions/profile-photo"
+
+[functions]
+  directory = "netlify/functions"
+
+[functions."sync-linkedin-photo"]
+  schedule = "0 9 * * 0"

@@ -7,17 +7,19 @@ export default function Contact() {
   return (
     <RevealSection id="contact" className="section contact">
       <SectionHeader
-        index="05"
+        index="06"
         label="Contact"
-        title="Let's connect about your next opportunity."
+        title="Let's build something reliable together."
         align="center"
       />
       <div className="contact-panel card">
+        <div className="contact-glow" aria-hidden="true"></div>
         <div className="contact-grid">
           <div className="contact-intro">
+            <p className="contact-kicker">Available for new opportunities</p>
             <p className="contact-copy">
-              Based in Miami and available for roles that value analytical thinking, communication,
-              and dependable execution.
+              Based in Miami and open to roles that value analytical thinking, clear communication,
+              and dependable execution across ERP, web, and technical development.
             </p>
             <div className="contact-chips">
               <span>{site.location}</span>
@@ -28,16 +30,9 @@ export default function Contact() {
           </div>
           <div className="contact-cta">
             <a className="contact-link" href={`mailto:${site.email}`}>
-              {site.email}
+              <span className="contact-link-label">Email me</span>
+              <span className="contact-link-value">{site.email}</span>
             </a>
-            <div className="contact-social">
-              <a href={site.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-              <a href={site.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -48,21 +43,21 @@ export default function Contact() {
 export function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-wave"></div>
-      <p>&copy; {site.name} 2026</p>
-      <div className="footer-links">
-        <a href={site.github} target="_blank" rel="noreferrer">
-          <GitHubIcon />
-          GitHub
-        </a>
-        <a href={site.linkedin} target="_blank" rel="noreferrer">
-          <LinkedInIcon />
-          LinkedIn
-        </a>
-        <a href={`mailto:${site.email}`}>
-          <EmailIcon />
-          Email
-        </a>
+      <div className="footer-wave" aria-hidden="true"></div>
+      <div className="footer-inner">
+        <p className="footer-tagline">Analyst · ERP programmer · Technical developer</p>
+        <p className="footer-copy">&copy; {site.name} 2026</p>
+        <div className="footer-links">
+          <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+            <GitHubIcon />
+          </a>
+          <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <LinkedInIcon />
+          </a>
+          <a href={`mailto:${site.email}`} aria-label="Email">
+            <EmailIcon />
+          </a>
+        </div>
       </div>
     </footer>
   );

@@ -7,6 +7,14 @@ React + Vite single-page portfolio aligned with `docs/resume.md`.
 - Vite 6
 - Plain CSS (`src/index.css`)
 
+## Favicon
+- `public/favicon.svg` — source artwork (GH initials on pink-to-violet gradient rounded square, matching `.brand-mark`)
+- `public/favicon.ico` — primary tab icon (16/32/48 multi-size ICO)
+- `public/favicon-32x32.png` — PNG fallback for browsers that prefer raster icons
+- `public/apple-touch-icon.png` — 180×180 home-screen icon for iOS
+- Regenerate raster files after editing the SVG: `npm run generate:favicons` (uses `sharp` + `to-ico` in `scripts/generate-favicons.js`)
+- `index.html` links ICO first, then PNG sizes and `apple-touch-icon`
+
 ## Project structure
 - `index.html` — Vite entry HTML
 - `src/main.jsx` — React bootstrap
@@ -26,10 +34,12 @@ npm run preview  # preview production build
 ```
 
 ## Deployment
-Build with `npm run build` and deploy the `dist/` folder (Netlify, Vercel, GitHub Pages, etc.).
+Build with `npm run build` and deploy the `dist/` folder. On Netlify, `netlify.toml` configures the build, scheduled LinkedIn photo sync, and `profile-photo` function — see `docs/linkedin-photo-sync.md`.
 
 ## Content updates
 Edit `src/data/portfolioData.js` or `docs/resume.md`, then mirror changes in the data file.
 
+For weekly LinkedIn alignment, see `docs/linkedin-sync.md` and `scripts/sync-linkedin.md`.
+
 ## Portrait image
-Add `public/assets/me.png` and replace the `GH` placeholder in `src/components/About.jsx` with an `<img>` when ready.
+Production serves the photo from `/.netlify/functions/profile-photo` (Netlify Blobs, synced weekly). Local dev uses `public/assets/profile.jpg` via `npm run sync:linkedin`. `ProfileAvatar` shows initials when the image is missing — see `docs/linkedin-photo-sync.md`.

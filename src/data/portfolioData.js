@@ -5,8 +5,12 @@ export const site = {
   languages: ['English', 'Spanish'],
   github: 'https://github.com/ghechavarria',
   linkedin: 'https://www.linkedin.com/in/grace-hechavarria-a817b2209',
+  profilePhoto: '/assets/profile.jpg',
+  profileInitials: 'GH',
   summary:
     'I build reliable systems, solve technical problems, and bring structure to complex workflows across education, ERP, and development.',
+  summaryMobile:
+    'Reliable systems across education, ERP, and development.',
   roles: [
     { text: 'analyst', color: 'violet' },
     { text: 'erp programmer', color: 'rose' },
@@ -17,6 +21,17 @@ export const site = {
     { value: 'ERP', label: 'Systems & SIS' },
     { value: 'MS', label: 'FIU · 2027' },
   ],
+};
+
+export const currently = {
+  label: 'Currently',
+  title: 'Building reliable systems at Broward College',
+  highlights: [
+    'ERP development & support',
+    'Student Information System rollout',
+    'MS in IT · FIU',
+  ],
+  stack: ['Natural 9.1', 'SQL', 'JavaScript', 'Python', 'WordPress'],
 };
 
 export const navLinks = [

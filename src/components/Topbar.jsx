@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 import { navLinks, site } from '../data/portfolioData';
+import { useActiveSection } from '../hooks/useActiveSection';
 import { useTheme } from '../hooks/useTheme';
+const sectionIds = navLinks.map((link) => link.href.replace('#', ''));
 
 export default function Topbar() {
   const { theme, toggleTheme } = useTheme();
   const [navOpen, setNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const active = useActiveSection(sectionIds);
 
   useEffect(() => {
     document.body.style.overflow = navOpen ? 'hidden' : '';
@@ -14,6 +18,13 @@ export default function Topbar() {
   }, [navOpen]);
 
   useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
     const close = () => setNavOpen(false);
     window.addEventListener('resize', close);
     return () => window.removeEventListener('resize', close);
@@ -21,16 +32,20 @@ export default function Topbar() {
 
   return (
     <>
-      <header className="topbar">
+      <header className={`topbar${scrolled ? ' is-scrolled' : ''}`}>
         <div className="topbar-row">
           <a className="topbar-brand" href="#top" onClick={() => setNavOpen(false)}>
-            <span className="brand-mark">GH</span>
+            <span className="brand-mark">{site.profileInitials}</span>
             <span className="brand-name">{site.name}</span>
           </a>
 
           <nav className="topbar-nav desktop-nav" aria-label="Main">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
+              <a
+                key={link.href}
+                href={link.href}
+                className={active === link.href.replace('#', '') ? 'is-active' : ''}
+              >
                 {link.label}
               </a>
             ))}
@@ -83,6 +98,7 @@ export default function Topbar() {
             <a
               key={link.href}
               href={link.href}
+              className={active === link.href.replace('#', '') ? 'is-active' : ''}
               style={{ transitionDelay: navOpen ? `${index * 45}ms` : '0ms' }}
               onClick={() => setNavOpen(false)}
             >

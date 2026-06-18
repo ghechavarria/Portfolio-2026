@@ -6,11 +6,13 @@ The portfolio is a React single-page app built with Vite. Content lives in `src/
 ## Components
 | Component | Purpose |
 |-----------|---------|
-| `Topbar` | Fixed nav, separate desktop links + mobile drawer overlay, theme toggle |
+| `ScrollProgress` | Top gradient scroll progress bar |
+| `Topbar` | Fixed nav with active section highlight, scroll state, mobile drawer |
 | `Hero` | Name, syntax-colored roles, CTAs, waves |
 | `About` | Bio and portrait placeholder |
 | `Skills` | Languages, systems, certifications |
-| `Experience` | Timeline + education |
+| `Experience` | Work history timeline |
+| `Education` | Degree cards grid |
 | `Projects` | Hackathon project cards |
 | `Contact` | Email and links |
 | `Footer` | Social links with gradient wave |
