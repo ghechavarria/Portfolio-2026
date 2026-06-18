@@ -1,17 +1,23 @@
 import { projects } from '../data/portfolioData';
 import RevealSection from './RevealSection';
+import SectionHeader from './SectionHeader';
 
 export default function Projects() {
   return (
     <RevealSection id="projects" className="section projects">
-      <div className="section-title-center">
-        <p className="label">Hackathon projects</p>
-        <h2>Creative builds from past hackathons.</h2>
-      </div>
+      <SectionHeader
+        index="04"
+        label="Hackathon projects"
+        title="Creative builds from past hackathons."
+        align="center"
+      />
       <div className="project-grid">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <article className={`project-card ${project.tone}`} key={project.title}>
-            <span className="project-tag">{project.tag}</span>
+            <div className="project-card-top">
+              <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
+              <span className="project-tag">{project.tag}</span>
+            </div>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <ul className="project-tech">

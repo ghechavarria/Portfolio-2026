@@ -9,8 +9,13 @@ export const site = {
     'I build reliable systems, solve technical problems, and bring structure to complex workflows across education, ERP, and development.',
   roles: [
     { text: 'analyst', color: 'violet' },
-    { text: 'erp programmer', color: 'pink' },
+    { text: 'erp programmer', color: 'rose' },
     { text: 'technical developer', color: 'coral' },
+  ],
+  stats: [
+    { value: '8+', label: 'Years in tech' },
+    { value: 'ERP', label: 'Systems & SIS' },
+    { value: 'MS', label: 'FIU · 2027' },
   ],
 };
 

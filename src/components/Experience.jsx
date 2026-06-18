@@ -1,20 +1,24 @@
 import { education, experience } from '../data/portfolioData';
 import RevealSection from './RevealSection';
+import SectionHeader from './SectionHeader';
 
 export default function Experience() {
   return (
     <RevealSection id="experience" className="section panel experience">
-      <div className="section-heading right">
-        <div>
-          <p className="label">Experience</p>
-          <h2>Roles that span support, development, and analysis.</h2>
-        </div>
-        <img src="/assets/arrows2.svg" alt="" />
-      </div>
+      <SectionHeader
+        index="03"
+        label="Experience"
+        title="Roles that span support, development, and analysis."
+        align="right"
+        icon="/assets/arrows2.svg"
+      />
       <div className="timeline">
-        {experience.map((role) => (
+        {experience.map((role, index) => (
           <article className="timeline-item" key={`${role.title}-${role.date}`}>
-            <div className="timeline-marker" aria-hidden="true"></div>
+            <div className="timeline-rail" aria-hidden="true">
+              <span className="timeline-index">{String(index + 1).padStart(2, '0')}</span>
+              <span className="timeline-marker"></span>
+            </div>
             <div className="card timeline-card">
               <span className="timeline-date">{role.date}</span>
               <h3>{role.title}</h3>
@@ -25,13 +29,12 @@ export default function Experience() {
         ))}
       </div>
       <div className="education-panel card">
-        <div className="section-heading">
-          <img src="/assets/diploma.svg" alt="" />
-          <div>
-            <p className="label">Education</p>
-            <h2>Always more to learn.</h2>
-          </div>
-        </div>
+        <SectionHeader
+          index="—"
+          label="Education"
+          title="Always more to learn."
+          icon="/assets/diploma.svg"
+        />
         <div className="education-grid">
           {education.map((item) => (
             <div className="education-item" key={item.degree}>

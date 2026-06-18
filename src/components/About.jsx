@@ -1,16 +1,16 @@
 import { about, site } from '../data/portfolioData';
 import RevealSection from './RevealSection';
+import SectionHeader from './SectionHeader';
 
 export default function About() {
   return (
     <RevealSection id="about" className="section panel about">
-      <div className="section-heading">
-        <img src="/assets/arrows.svg" alt="" />
-        <div>
-          <p className="label">{about.label}</p>
-          <h2>{about.heading}</h2>
-        </div>
-      </div>
+      <SectionHeader
+        index="01"
+        label={about.label}
+        title={about.heading}
+        icon="/assets/arrows.svg"
+      />
       <div className="about-grid">
         <div className="card text-card">
           {about.paragraphs.map((paragraph) => (
@@ -18,11 +18,13 @@ export default function About() {
           ))}
         </div>
         <div className="card portrait-card">
-          <div className="portrait-frame" role="img" aria-label={site.name}>
-            GH
+          <div className="portrait-ring">
+            <div className="portrait-frame" role="img" aria-label={site.name}>
+              GH
+            </div>
           </div>
-          <p>{site.location}</p>
-          <p className="portrait-note">{site.languages.join(' & ')}</p>
+          <p className="portrait-location">{site.location}</p>
+          <p className="portrait-note">{site.languages.join(' · ')}</p>
         </div>
       </div>
     </RevealSection>
