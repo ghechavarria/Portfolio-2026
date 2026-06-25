@@ -33,7 +33,8 @@ export default function ContactFormModal({ open, onClose }) {
     event.preventDefault();
     setStatus('sending');
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     try {
       const response = await fetch('/', {
@@ -49,7 +50,7 @@ export default function ContactFormModal({ open, onClose }) {
 
       if (!response.ok) throw new Error('Form submission failed');
 
-      event.currentTarget.reset();
+      form.reset();
       setStatus('success');
     } catch {
       setStatus('error');
