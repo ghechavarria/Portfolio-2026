@@ -66,9 +66,8 @@ export const skills = {
     'C',
     'C#',
     'jQuery',
-    'Git',
   ],
-  systems: [
+  frameworks: [
     'React',
     'Vite',
     'Tailwind CSS',
@@ -78,20 +77,25 @@ export const skills = {
     'Flask',
     'Bootstrap',
     'WordPress',
+  ],
+  systems: [
     'ERP support',
     'Natural 9.1',
-    'Student Information System',
+    'Ellucian',
     'MySQL',
+    'Google Cloud Vision',
+  ],
+  tools: [
     'Android Studio',
     'Unity',
-    'Google Cloud Vision',
     'Netlify',
     'GitHub',
+    'Git',
     'Microsoft Office',
+  ],
+  design: [
     'Figma',
     'Adobe Illustrator',
-    'Adobe Photoshop',
-    'Clip Studio Paint',
     'Blender',
   ],
   certifications: [
@@ -131,7 +135,7 @@ export const experience = [
     title: 'Volunteer Software Development Intern',
     org: 'Broward College · Davie, FL',
     description:
-      'Planned and developed a WordPress plugin for the CSIT Broward College website and enhanced announcement resizing and sort order for D2L and CSIT web pages.',
+      'Planned and developed a WordPress plugin for the CSIT Broward College website and enhanced announcing plugin for D2L and CSIT web pages.',
   },
   {
     date: '2016 – 2019',
@@ -212,15 +216,15 @@ export const projects = [
     github: 'https://github.com/Ecnavda/localcoin',
     devpost: 'https://devpost.com/software/local-coin',
   },
-  {
-    tag: 'BrickHack 7',
-    title: 'Theft Me',
-    description:
-      'Identity-theft game where players impersonate someone based on wallet contents, belongings, and workplace conversations.',
-    tech: ['Unity', 'C#', 'SteamVR', 'Photoshop', 'Blender'],
-    tone: 'gray',
-    devpost: 'https://devpost.com/software/theft-me',
-  },
+  // {
+  //   tag: 'BrickHack 7',
+  //   title: 'Theft Me',
+  //   description:
+  //     'Identity-theft game where players impersonate someone based on wallet contents, belongings, and workplace conversations.',
+  //   tech: ['Unity', 'C#', 'SteamVR', 'Photoshop', 'Blender'],
+  //   tone: 'gray',
+  //   devpost: 'https://devpost.com/software/theft-me',
+  // },
   {
     tag: 'Technica 2020',
     title: 'BeBrave',
@@ -242,32 +246,32 @@ export const projects = [
     github: 'https://github.com/ghechavarria/mathwae',
     winner: true,
   },
-  {
-    tag: 'Silly Hacks 2020',
-    title: 'Whack-a-Jerge',
-    description:
-      'Stress-relief whack-a-mole game built in Unity to release bottled-up frustration.',
-    tech: ['Unity', 'C#'],
-    tone: 'yellow',
-    devpost: 'https://devpost.com/software/whackagerge',
-  },
-  {
-    tag: 'ShellHacks 2020',
-    title: 'Art Tunes',
-    description:
-      'Web app that converts images into sound so blind users can experience art and paintings through audio.',
-    tech: ['HTML5', 'CSS', 'JavaScript', 'PHP', 'Bootstrap'],
-    tone: 'gray',
-    github: 'https://github.com/mintyrouge/ArtTunes',
-    url: 'https://arttunes.online/',
-  },
-  {
-    tag: 'PlutoHacks 2019',
-    title: 'PlutoHacks 2019',
-    description:
-      'Winning hackathon submission; project not listed on Devpost.',
-    tech: [],
-    tone: 'gray',
-    winner: true,
-  },
+  // {
+  //   tag: 'Silly Hacks 2020',
+  //   title: 'Whack-a-Jerge',
+  //   description:
+  //     'Stress-relief whack-a-mole game built in Unity to release bottled-up frustration.',
+  //   tech: ['Unity', 'C#'],
+  //   tone: 'yellow',
+  //   devpost: 'https://devpost.com/software/whackagerge',
+  // },
+  // {
+  //   tag: 'ShellHacks 2020',
+  //   title: 'Art Tunes',
+  //   description:
+  //     'Web app that converts images into sound so blind users can experience art and paintings through audio.',
+  //   tech: ['HTML5', 'CSS', 'JavaScript', 'PHP', 'Bootstrap'],
+  //   tone: 'gray',
+  //   github: 'https://github.com/mintyrouge/ArtTunes',
+  //   url: 'https://arttunes.online/',
+  // },
+  // {
+  //   tag: 'PlutoHacks 2019',
+  //   title: 'PlutoHacks 2019',
+  //   description:
+  //     'Winning hackathon submission; project not listed on Devpost.',
+  //   tech: [],
+  //   tone: 'gray',
+  //   winner: true,
+  // },
 ];

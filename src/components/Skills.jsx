@@ -21,9 +21,25 @@ export default function Skills() {
           </ul>
         </div>
         <div className="card skill-group">
-          <h3>Systems &amp; tools</h3>
+          <h3>Frameworks &amp; Libraries</h3>
+          <ul className="skill-pills">
+            {skills.frameworks.map((skill) => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="card skill-group">
+          <h3>Systems &amp; Platforms</h3>
           <ul className="skill-pills">
             {skills.systems.map((skill) => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="card skill-group">
+          <h3>Tools &amp; Design</h3>
+          <ul className="skill-pills">
+            {[...skills.tools, ...skills.design].map((skill) => (
               <li key={skill}>{skill}</li>
             ))}
           </ul>
