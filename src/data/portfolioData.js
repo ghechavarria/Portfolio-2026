@@ -135,6 +135,7 @@ export const projects = [
       'Interactive bullying-awareness scenarios designed for younger students to build a more diverse understanding of bullying and how to counteract it.',
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Illustrator'],
     tone: 'peach',
+    github: 'https://github.com/ghechavarria/BeBrave',
   },
   {
     tag: 'Silly Hacks 2020',
@@ -143,6 +144,7 @@ export const projects = [
       'Web app designed to prank cheaters who use Mathway.com to find answers to math problems.',
     tech: ['Python', 'Flask', 'JavaScript', 'Kintone'],
     tone: 'yellow',
+    github: 'https://github.com/ghechavarria/mathwae',
   },
   {
     tag: 'BC Hackathon 2019',
@@ -159,5 +161,6 @@ export const projects = [
       'Custom Unity take on Whack-A-Mole featuring a Balding Boss, a Karen, a Mosquito, and a surprise character.',
     tech: ['C#', 'Unity', 'Illustrator'],
     tone: 'pink',
+    github: 'https://github.com/ghechavarria/whackagerge',
   },
 ];

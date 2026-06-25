@@ -15,12 +15,15 @@ export default function Education() {
         <div className="education-cards">
           {education.map((item) => (
             <div className="education-item" key={item.degree}>
-              <span className="education-degree">{item.degree}</span>
-              <span className="education-meta">
-                {item.meta}
-                <br />
-                {item.school}
-              </span>
+              <span className="education-badge">{item.degree.split(' in ')[0]}</span>
+              <div className="education-body">
+                <span className="education-degree">{item.degree.split(' in ')[1] ?? item.degree}</span>
+                <span className="education-meta">
+                  {item.meta}
+                  <br />
+                  {item.school}
+                </span>
+              </div>
             </div>
           ))}
         </div>

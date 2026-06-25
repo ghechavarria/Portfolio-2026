@@ -1,6 +1,7 @@
 import { projects } from '../data/portfolioData';
 import RevealSection from './RevealSection';
 import SectionHeader from './SectionHeader';
+import { GitHubIcon } from './SocialIcons';
 
 export default function Projects() {
   return (
@@ -16,6 +17,17 @@ export default function Projects() {
           <article className={`project-card ${project.tone}`} key={project.title}>
             <div className="project-card-top">
               <span className="project-tag">{project.tag}</span>
+              {project.github && (
+                <a
+                  className="project-github"
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`View ${project.title} on GitHub`}
+                >
+                  <GitHubIcon />
+                </a>
+              )}
             </div>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
