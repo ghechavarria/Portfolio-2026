@@ -127,6 +127,25 @@ export const education = [
   },
 ];
 
+export const websites = [
+  {
+    title: 'Mooric ERP',
+    url: 'https://mooricerp.com',
+    screenshot: '/assets/projects/mooric-erp.png',
+    description:
+      'Business ERP platform website focused on clear product messaging and a polished client-facing experience.',
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+  },
+  {
+    title: 'Power UP Personnel',
+    url: 'https://poweruppersonnel.com',
+    screenshot: '/assets/projects/powerup-personnel.png',
+    description:
+      'Staffing and recruiting site built to present services clearly and support lead generation for the business.',
+    tech: ['React', 'TypeScript', 'Vite', 'React Router', 'Leaflet'],
+  },
+];
+
 export const projects = [
   {
     tag: 'Technica 2020',
@@ -136,6 +155,7 @@ export const projects = [
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Illustrator'],
     tone: 'peach',
     github: 'https://github.com/ghechavarria/BeBrave',
+    winner: true,
   },
   {
     tag: 'Silly Hacks 2020',
@@ -145,22 +165,27 @@ export const projects = [
     tech: ['Python', 'Flask', 'JavaScript', 'Kintone'],
     tone: 'yellow',
     github: 'https://github.com/ghechavarria/mathwae',
+    winner: true,
   },
   {
-    tag: 'BC Hackathon 2019',
-    title: 'inRecycle',
+    tag: 'ShellHacks 2021',
+    title: 'Local Coin',
     description:
-      'Mobile app UI that scans water bottles and instructs users which parts are recyclable. UI designer on the team.',
-    tech: ['C#', 'Unity', 'Google Vision API'],
+      'Mobile app that helps newcomers understand, manage, and track cryptocurrency portfolios in one place.',
+    tech: ['Kotlin', 'Android Studio', 'Coin Routes API', 'Figma'],
     tone: 'gray',
+    github: 'https://github.com/Ecnavda/localcoin',
+    devpost: 'https://devpost.com/software/local-coin',
   },
   {
-    tag: 'Silly Hacks 2020',
-    title: 'Whack-A-Jerge',
+    tag: 'ShellHacks 2023',
+    title: 'Themis',
     description:
-      'Custom Unity take on Whack-A-Mole featuring a Balding Boss, a Karen, a Mosquito, and a surprise character.',
-    tech: ['C#', 'Unity', 'Illustrator'],
+      'Phishing defense tool that detects AI-generated text, logos, and suspicious email language to help users spot deceptive messages.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Python', 'Google Cloud Vision'],
     tone: 'pink',
-    github: 'https://github.com/ghechavarria/whackagerge',
+    github: 'https://github.com/HandHeart/ThemisAIWatch',
+    devpost: 'https://devpost.com/software/best-overall',
+    winner: true,
   },
 ];

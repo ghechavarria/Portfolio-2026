@@ -60,12 +60,19 @@ Broward College · 2021
 ### AS in Information Technology — Data Support
 Broward College · 2018
 
-## Hackathon Projects
+## Projects
 
-- **BeBrave** — Technica 2020. Interactive bullying-awareness scenarios for younger students. HTML5, CSS3, JavaScript.
-- **Mathwae** — Silly Hacks 2020. Web app that pranks cheaters using Mathway.com. Python, Flask, Kintone, JavaScript.
-- **inRecycle** — BC Hackathon 2019. Mobile app UI for scanning water bottles to identify recyclable parts. C#, Unity, Google Vision API.
-- **Whack-A-Jerge** — Silly Hacks 2020. Unity whack-a-mole game. C#, Unity.
+### Websites
+
+- **Mooring ERP** — [mooricerp.com](https://mooricerp.com). React, TypeScript, Vite, Tailwind CSS, Framer Motion.
+- **Power UP Personnel** — [poweruppersonnel.com](https://poweruppersonnel.com). React, TypeScript, Vite, React Router, Leaflet.
+
+### Hackathon Projects
+
+- **BeBrave** — Technica 2020 (Winner). Interactive bullying-awareness scenarios for younger students. HTML5, CSS3, JavaScript.
+- **Mathwae** — Silly Hacks 2020 (Winner). Web app that pranks cheaters using Mathway.com. Python, Flask, Kintone, JavaScript.
+- **Local Coin** — ShellHacks 2021. Crypto portfolio mobile app for newcomers. Kotlin, Android Studio, Coin Routes API, Figma. [Devpost](https://devpost.com/software/local-coin)
+- **Themis** — ShellHacks 2023 (Winner). Phishing defense tool for AI-generated text, logos, and suspicious email language. HTML, CSS, JavaScript, PHP, Python, Google Cloud Vision. [Devpost](https://devpost.com/software/best-overall)
 
 ## Contact
 
