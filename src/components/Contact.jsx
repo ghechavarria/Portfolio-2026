@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { site } from '../data/portfolioData';
 import RevealSection from './RevealSection';
 import SectionHeader from './SectionHeader';
-import { EmailIcon, GitHubIcon, LinkedInIcon } from './SocialIcons';
+import ContactFormModal from './ContactFormModal';
+import { GitHubIcon, LinkedInIcon } from './SocialIcons';
 
 export default function Contact() {
+  const [formOpen, setFormOpen] = useState(false);
+
   return (
     <RevealSection id="contact" className="section contact">
       <SectionHeader
@@ -29,13 +33,14 @@ export default function Contact() {
             </div>
           </div>
           <div className="contact-cta">
-            <a className="contact-link" href={`mailto:${site.email}`}>
-              <span className="contact-link-label">Email me</span>
-              <span className="contact-link-value">{site.email}</span>
-            </a>
+            <button className="contact-link" type="button" onClick={() => setFormOpen(true)}>
+              <span className="contact-link-label">Contact me</span>
+              <span className="contact-link-value">Send a message</span>
+            </button>
           </div>
         </div>
       </div>
+      <ContactFormModal open={formOpen} onClose={() => setFormOpen(false)} />
     </RevealSection>
   );
 }
@@ -53,9 +58,6 @@ export function Footer() {
           </a>
           <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <LinkedInIcon />
-          </a>
-          <a href={`mailto:${site.email}`} aria-label="Email">
-            <EmailIcon />
           </a>
         </div>
       </div>

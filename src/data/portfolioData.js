@@ -161,7 +161,7 @@ export const projects = [
     tag: 'Silly Hacks 2020',
     title: 'Mathwae',
     description:
-      'Web app designed to prank cheaters who use Mathway.com to find answers to math problems.',
+      'A Mathway.com lookalike web application that returns intentionally incorrect answers, designed to discourage academic dishonesty.',
     tech: ['Python', 'Flask', 'JavaScript', 'Kintone'],
     tone: 'yellow',
     github: 'https://github.com/ghechavarria/mathwae',

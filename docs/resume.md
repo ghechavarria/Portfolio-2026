@@ -70,7 +70,7 @@ Broward College · 2018
 ### Hackathon Projects
 
 - **BeBrave** — Technica 2020 (Winner). Interactive bullying-awareness scenarios for younger students. HTML5, CSS3, JavaScript.
-- **Mathwae** — Silly Hacks 2020 (Winner). Web app that pranks cheaters using Mathway.com. Python, Flask, Kintone, JavaScript.
+- **Mathwae** — Silly Hacks 2020 (Winner). A Mathway.com lookalike web app that returns incorrect answers to discourage academic dishonesty. Python, Flask, Kintone, JavaScript.
 - **Local Coin** — ShellHacks 2021. Crypto portfolio mobile app for newcomers. Kotlin, Android Studio, Coin Routes API, Figma. [Devpost](https://devpost.com/software/local-coin)
 - **Themis** — ShellHacks 2023 (Winner). Phishing defense tool for AI-generated text, logos, and suspicious email language. HTML, CSS, JavaScript, PHP, Python, Google Cloud Vision. [Devpost](https://devpost.com/software/best-overall)
 
