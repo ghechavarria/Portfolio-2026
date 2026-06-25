@@ -1637,7 +1637,14 @@ h1 {
   box-shadow: 0 6px 16px -10px rgba(217, 154, 28, 0.8);
 }
 
-.project-github {
+.project-card-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.project-card-link {
   flex-shrink: 0;
   z-index: 2;
   display: inline-flex;
@@ -1652,14 +1659,14 @@ h1 {
   transition: transform 0.2s var(--ease), color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.project-github:hover {
+.project-card-link:hover {
   transform: translateY(-2px);
   color: var(--text);
   border-color: var(--border-strong);
   background: var(--fill-muted);
 }
 
-.project-github svg {
+.project-card-link svg {
   width: 16px;
   height: 16px;
   fill: currentColor;

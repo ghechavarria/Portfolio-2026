@@ -155,6 +155,7 @@ export const projects = [
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Illustrator'],
     tone: 'peach',
     github: 'https://github.com/ghechavarria/BeBrave',
+    url: 'https://bebrave.space/',
     winner: true,
   },
   {
@@ -186,6 +187,7 @@ export const projects = [
     tone: 'pink',
     github: 'https://github.com/HandHeart/ThemisAIWatch',
     devpost: 'https://devpost.com/software/best-overall',
+    url: 'https://themis-vision.netlify.app',
     winner: true,
   },
 ];

@@ -1,7 +1,7 @@
 import { projects, websites } from '../data/portfolioData';
 import RevealSection from './RevealSection';
 import SectionHeader from './SectionHeader';
-import { GitHubIcon } from './SocialIcons';
+import { ExternalLinkIcon, GitHubIcon } from './SocialIcons';
 
 export default function Projects() {
   return (
@@ -54,17 +54,30 @@ export default function Projects() {
                   <span className="project-tag">{project.tag}</span>
                   {project.winner && <span className="project-winner">Winner</span>}
                 </div>
-                {project.github && (
-                  <a
-                    className="project-github"
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`View ${project.title} on GitHub`}
-                  >
-                    <GitHubIcon />
-                  </a>
-                )}
+                <div className="project-card-links">
+                  {project.url && (
+                    <a
+                      className="project-card-link"
+                      href={project.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Visit ${project.title} live site`}
+                    >
+                      <ExternalLinkIcon />
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      className="project-card-link"
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`View ${project.title} on GitHub`}
+                    >
+                      <GitHubIcon />
+                    </a>
+                  )}
+                </div>
               </div>
               <h3>
                 {project.devpost ? (
