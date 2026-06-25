@@ -3,7 +3,7 @@ import { site } from '../data/portfolioData';
 import RevealSection from './RevealSection';
 import SectionHeader from './SectionHeader';
 import ContactFormModal from './ContactFormModal';
-import { GitHubIcon, LinkedInIcon } from './SocialIcons';
+import { GitHubIcon, LinkedInIcon, ExternalLinkIcon } from './SocialIcons';
 
 export default function Contact() {
   const [formOpen, setFormOpen] = useState(false);
@@ -53,6 +53,9 @@ export function Footer() {
         <p className="footer-tagline">Analyst · ERP programmer · Technical developer</p>
         <p className="footer-copy">&copy; {site.name} 2026</p>
         <div className="footer-links">
+          <a href={site.website} target="_blank" rel="noreferrer" aria-label="Portfolio">
+            <ExternalLinkIcon />
+          </a>
           <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub">
             <GitHubIcon />
           </a>

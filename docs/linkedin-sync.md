@@ -4,8 +4,9 @@ Weekly automation keeps [Portfolio 2026](https://github.com/ghechavarria/Portfol
 
 **LinkedIn URL:** https://www.linkedin.com/in/grace-hechavarria-a817b2209
 
-**Primary data file:** `src/data/portfolioData.js`  
-**Resume mirror:** `docs/resume.md`
+**Primary data file:** `src/data/portfolioData.js`
+
+Resume files (LaTeX, PDF, markdown) live in `docs/resume/` and are **not** part of this sync.
 
 ---
 
@@ -13,28 +14,30 @@ Weekly automation keeps [Portfolio 2026](https://github.com/ghechavarria/Portfol
 
 LinkedIn does not expose a stable public API without OAuth. The automation agent reads the **public profile page** (browser snapshot or fetch) and maps visible sections into portfolio data.
 
-| LinkedIn section | `portfolioData.js` export | `docs/resume.md` section | Notes |
-|------------------|---------------------------|--------------------------|-------|
-| Name (top card) | `site.name` | Title / contact | Keep display name consistent |
-| Headline | `site.roles[]`, `site.summary`, `currently.title` | Summary (first line) | Split headline into role chips + summary; update “Currently” title if it reflects current focus |
-| About | `about.paragraphs`, `site.summary` | Summary body | Prefer LinkedIn About for long-form; keep `summary` as one-line site tagline |
-| Location | `site.location` | Contact | City/region only on site |
-| Experience (each role) | `experience[]` | Experience | Map: `title` ← job title, `org` ← company · location, `date` ← dates, `description` ← role description |
-| Education | `education[]` | Education | Map: `degree`, `meta` (field of study), `school` (institution · year) |
-| Licenses & certifications | `skills.certifications[]` | Certifications | One string per cert |
-| Skills (endorsed list) | `skills.languages[]`, `skills.systems[]` | Languages / Systems | Split into languages vs tools/systems using judgment; do not drop ERP-specific items unless removed on LinkedIn |
-| Featured / current role context | `currently.highlights[]`, `currently.stack[]` | — | Derive from latest role + skills; stack is curated, not auto-imported wholesale |
-| Contact links | `site.github`, `site.linkedin`, `site.email` | Contact | Email/phone usually not on public LinkedIn; do not overwrite email unless user confirms |
-| Languages | `site.languages` | Contact | From LinkedIn Languages section if present |
-| Stats / hero chips | `site.stats` | — | **Manual curation** — years, degree progress; update only when education dates change on LinkedIn |
-| Projects / hackathons | `projects[]` | Hackathon Projects | **Not on LinkedIn** — do not delete; only add if LinkedIn Featured clearly lists a new project |
-| Nav, labels, tones | `navLinks`, `about.label`, project `tone` | — | Site UI only — never overwrite from LinkedIn |
+| LinkedIn section | `portfolioData.js` export | Notes |
+|------------------|---------------------------|-------|
+| Name (top card) | `site.name` | Keep display name consistent |
+| Headline | `site.roles[]`, `site.summary`, `currently.title` | Split headline into role chips + summary; update “Currently” title if it reflects current focus |
+| About | `about.paragraphs`, `site.summary` | Prefer LinkedIn About for long-form; keep `summary` as one-line site tagline |
+| Location | `site.location` | City/region only on site |
+| Experience (each role) | `experience[]` | Map: `title` ← job title, `org` ← company · location, `date` ← dates, `description` ← role description |
+| Education | `education[]` | Map: `degree`, `meta` (field of study), `school` (institution · year) |
+| Licenses & certifications | `skills.certifications[]` | One string per cert |
+| Skills (endorsed list) | `skills.languages[]`, `skills.systems[]` | Split into languages vs tools/systems using judgment; do not drop ERP-specific items unless removed on LinkedIn |
+| Featured / current role context | `currently.highlights[]`, `currently.stack[]` | Derive from latest role + skills; stack is curated, not auto-imported wholesale |
+| Contact links | `site.github`, `site.linkedin`, `site.email`, `site.website` | Email/phone usually not on public LinkedIn; do not overwrite email unless user confirms |
+| Languages | `site.languages` | From LinkedIn Languages section if present |
+| Stats / hero chips | `site.stats` | **Manual curation** — years, degree progress; update only when education dates change on LinkedIn |
+| Projects / hackathons | `projects[]` | **Not on LinkedIn** — do not delete; only add if LinkedIn Featured clearly lists a new project |
+| Nav, labels, tones | `navLinks`, `about.label`, project `tone` | Site UI only — never overwrite from LinkedIn |
 
 ### Intentionally out of scope
 
 - Profile photo (`public/assets/me.png`) — separate asset workflow
 - Theme, layout, component copy (`about.heading`, `currently.label`)
 - GitHub activity or repos
+- `docs/resume/` — tracked resume files, updated separately
+- `docs/sample resumes/` — gitignored reference resumes
 
 ---
 
@@ -42,7 +45,7 @@ LinkedIn does not expose a stable public API without OAuth. The automation agent
 
 1. **Open public profile** in a browser (preferred) or attempt HTTP fetch.
 2. **Capture:** name, headline, about, experience, education, certifications, skills, location, languages.
-3. **Compare** each mapped field to `src/data/portfolioData.js` and `docs/resume.md`.
+3. **Compare** each mapped field to `src/data/portfolioData.js`.
 4. **Update** only changed fields; preserve portfolio-specific wording where LinkedIn text is shorter or generic.
 5. **Run** `npm run build` in the repo root (`Portfolio 2026`).
 6. **Report** a concise diff summary; open a PR if configured — **do not commit to main directly** unless the automation explicitly allows it.
@@ -63,7 +66,7 @@ LinkedIn does not expose a stable public API without OAuth. The automation agent
 ## Diff and update process
 
 ```
-LinkedIn (browser) → extract fields → diff vs portfolioData.js + resume.md
+LinkedIn (browser) → extract fields → diff vs portfolioData.js
        → edit files → npm run build → summarize changes → PR (optional)
 ```
 
@@ -72,7 +75,6 @@ LinkedIn (browser) → extract fields → diff vs portfolioData.js + resume.md
 - Match existing code style in `portfolioData.js` (single quotes, trailing commas).
 - Keep `experience` in reverse chronological order.
 - Date format on site: `YYYY – Present` or `YYYY – YYYY` (en dash).
-- After editing `portfolioData.js`, update matching sections in `docs/resume.md` so docs stay the single human-readable source noted in `docs/website.md`.
 - If LinkedIn removes a job, **confirm** before deleting from the portfolio (stale LinkedIn vs intentional removal).
 
 ### Build verification
@@ -117,11 +119,9 @@ Read docs/linkedin-sync.md and scripts/sync-linkedin.md for field mapping and ch
 
 1. Fetch the public LinkedIn profile (browser snapshot preferred). If login is required, use an authenticated browser session. If blocked, stop and report — do not scrape repeatedly.
 
-2. Compare LinkedIn content to:
-   - src/data/portfolioData.js
-   - docs/resume.md
+2. Compare LinkedIn content to src/data/portfolioData.js only.
 
-3. Update only fields that changed per the mapping table in docs/linkedin-sync.md. Do not remove projects[] unless explicitly removed on LinkedIn Featured. Preserve site-only UI fields.
+3. Update only fields that changed per the mapping table in docs/linkedin-sync.md. Do not remove projects[] unless explicitly removed on LinkedIn Featured. Preserve site-only UI fields. Do not edit docs/resume/ or docs/sample resumes/.
 
 4. Run npm run build in the repository root. Fix errors until build passes.
 
@@ -157,7 +157,6 @@ When `cursor-app-control` is available in the Agents Window, ask to create the a
 |------|---------|
 | `scripts/sync-linkedin.md` | Step-by-step checklist for the automation agent |
 | `src/data/portfolioData.js` | Site content consumed by React components |
-| `docs/resume.md` | Human-readable resume mirror |
 | `docs/website.md` | General site maintenance notes |
 
 ---

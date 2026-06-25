@@ -5,12 +5,13 @@ export const site = {
   languages: ['English', 'Spanish'],
   github: 'https://github.com/ghechavarria',
   linkedin: 'https://www.linkedin.com/in/grace-hechavarria-a817b2209',
+  website: 'https://gracie.cloud',
   profilePhoto: '/assets/profile.jpg',
   profileInitials: 'GH',
   summary:
-    'I build reliable systems, solve technical problems, and bring structure to complex workflows across education, ERP, and development.',
+    'I build reliable systems, solve technical problems, and bring structure to complex workflows across education, support, and software development.',
   summaryMobile:
-    'Reliable systems across education, ERP, and development.',
+    'Reliable systems across education, support, and development.',
   roles: [
     { text: 'analyst', color: 'violet' },
     { text: 'erp programmer', color: 'rose' },
@@ -18,18 +19,18 @@ export const site = {
   ],
   stats: [
     { value: '8+', label: 'Years in tech' },
-    { value: 'ERP', label: 'Systems & SIS' },
+    { value: 'SIS', label: 'Systems & Support' },
     { value: 'MS', label: 'FIU · 2027' },
   ],
 };
 
 export const currently = {
   label: 'Currently',
-  title: 'Building reliable systems at Broward College',
+  title: 'Supporting college systems, staff, and students',
   highlights: [
-    'ERP development & support',
+    'Programmer & analyst collaboration',
     'Student Information System rollout',
-    'MS in IT · FIU',
+    'Student and staff support',
   ],
   stack: ['Natural 9.1', 'SQL', 'JavaScript', 'Python', 'WordPress'],
 };
@@ -46,20 +47,52 @@ export const about = {
   label: 'About me',
   heading: 'Improving systems with energy, efficiency, and care.',
   paragraphs: [
-    "Hello — I'm Grace, a developer from the Miami area. I'm part of the team that develops, maintains, and troubleshoots Broward College's ERP systems, with a focus on making institutional tools more reliable, secure, and user-friendly.",
-    "My background spans computer lab support, WordPress plugin development, augmented reality engineering, and ERP analysis — giving me a practical view of both people and technology. I'm currently pursuing an MS in Information Technology at Florida International University.",
+    "Hello — I'm Grace, a developer from the Miami area. At Broward College, I work across programming, systems support, and technical development to improve tools used by staff and students.",
+    "My background spans computer lab support, WordPress plugin development, augmented reality engineering, SIS rollout work, and ERP programming — giving me a practical view of both people and technology. I'm currently pursuing an MS in Information Technology at Florida International University.",
   ],
 };
 
 export const skills = {
-  languages: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'SQL', 'PHP', 'Python', 'Java', 'Git'],
+  languages: [
+    'HTML5',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'Python',
+    'Java',
+    'PHP',
+    'SQL',
+    'Kotlin',
+    'C',
+    'C#',
+    'jQuery',
+    'Git',
+  ],
   systems: [
+    'React',
+    'Vite',
+    'Tailwind CSS',
+    'Framer Motion',
+    'React Router',
+    'Leaflet',
+    'Flask',
+    'Bootstrap',
+    'WordPress',
     'ERP support',
     'Natural 9.1',
     'Student Information System',
-    'WordPress plugins',
-    'Microsoft Office',
     'MySQL',
+    'Android Studio',
+    'Unity',
+    'Google Cloud Vision',
+    'Netlify',
+    'GitHub',
+    'Microsoft Office',
+    'Figma',
+    'Adobe Illustrator',
+    'Adobe Photoshop',
+    'Clip Studio Paint',
+    'Blender',
   ],
   certifications: [
     'CIW JavaScript Specialist',
@@ -73,39 +106,49 @@ export const skills = {
 
 export const experience = [
   {
-    date: '2021 – Present',
+    date: 'Jul. 2023 – Present',
     title: 'Analyst, ERP Programmer',
     org: 'Broward College · Davie, FL',
     description:
-      'Develops, maintains, and troubleshoots ERP systems supporting academic and administrative operations, with a focus on reliability, security, and smooth campus workflows.',
+      'Develops, maintains, troubleshoots, and enhances ERP systems supporting academic and administrative operations, while collaborating with programmers and analysts to resolve issues and improve features.',
   },
   {
-    date: '2021 – Present',
+    date: 'Oct. 2024 – Present',
     title: 'Technical Developer',
     org: 'Broward College · Davie, FL',
     description:
-      'Supports the rollout of the new Student Information System, helping translate technical updates into usable tools for staff and students.',
+      'Serves in a temporary secondary role supporting the new Student Information System implementation by translating technical updates, documenting changes, and helping staff and students use new SIS tools effectively.',
   },
   {
     date: '2019 – 2021',
     title: 'Administrative Specialist, Computer Lab Assistant',
     org: 'Broward College · Davie, FL',
     description:
-      'Helped students with coursework, Microsoft Office tools, and programming homework across HTML5, CSS, JavaScript, jQuery, SQL, PHP, Java, and Python.',
+      'Assisted students with computer science assignments, Microsoft Office, and programming coursework across HTML5, CSS, JavaScript, jQuery, SQL, PHP, Java, and Python.',
   },
   {
     date: '2019 – 2020',
     title: 'Volunteer Software Development Intern',
     org: 'Broward College · Davie, FL',
     description:
-      'Planned and developed a WordPress plugin for the CSIT Broward College website and enhanced the Broward College Announcements Plugin.',
+      'Planned and developed a WordPress plugin for the CSIT Broward College website and enhanced announcement resizing and sort order for D2L and CSIT web pages.',
   },
   {
     date: '2016 – 2019',
     title: 'Augmented Reality Software Engineer',
     org: '3D HoloGroup · Miami, FL',
     description:
-      'Worked on immersive software in Miami, building technical experience beyond education systems and ERP work.',
+      'Worked on immersive software in Miami, building hands-on experience with interactive technology and application development.',
+  },
+];
+
+export const leadership = [
+  {
+    date: '2020 – 2025',
+    title: 'Organizer',
+    org: 'PlutoHacks · Broward College',
+    description:
+      'Helped organize Broward College’s annual 24-hour hackathon, supporting logistics, mentorship, and participant experience without serving as host.',
   },
 ];
 
@@ -148,6 +191,37 @@ export const websites = [
 
 export const projects = [
   {
+    tag: 'ShellHacks 2023',
+    title: 'Themis',
+    description:
+      'Phishing defense tool that detects AI-generated text, logos, and suspicious email language to help users spot deceptive messages.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Python', 'Google Cloud Vision'],
+    tone: 'pink',
+    github: 'https://github.com/HandHeart/ThemisAIWatch',
+    devpost: 'https://devpost.com/software/best-overall',
+    url: 'https://themis-vision.netlify.app',
+    winner: true,
+  },
+  {
+    tag: 'ShellHacks 2021',
+    title: 'Local Coin',
+    description:
+      'Mobile app that helps newcomers understand, manage, and track cryptocurrency portfolios in one place.',
+    tech: ['Kotlin', 'Android Studio', 'Coin Routes API', 'Figma'],
+    tone: 'gray',
+    github: 'https://github.com/Ecnavda/localcoin',
+    devpost: 'https://devpost.com/software/local-coin',
+  },
+  {
+    tag: 'BrickHack 7',
+    title: 'Theft Me',
+    description:
+      'Identity-theft game where players impersonate someone based on wallet contents, belongings, and workplace conversations.',
+    tech: ['Unity', 'C#', 'SteamVR', 'Photoshop', 'Blender'],
+    tone: 'gray',
+    devpost: 'https://devpost.com/software/theft-me',
+  },
+  {
     tag: 'Technica 2020',
     title: 'BeBrave',
     description:
@@ -169,25 +243,31 @@ export const projects = [
     winner: true,
   },
   {
-    tag: 'ShellHacks 2021',
-    title: 'Local Coin',
+    tag: 'Silly Hacks 2020',
+    title: 'Whack-a-Jerge',
     description:
-      'Mobile app that helps newcomers understand, manage, and track cryptocurrency portfolios in one place.',
-    tech: ['Kotlin', 'Android Studio', 'Coin Routes API', 'Figma'],
-    tone: 'gray',
-    github: 'https://github.com/Ecnavda/localcoin',
-    devpost: 'https://devpost.com/software/local-coin',
+      'Stress-relief whack-a-mole game built in Unity to release bottled-up frustration.',
+    tech: ['Unity', 'C#'],
+    tone: 'yellow',
+    devpost: 'https://devpost.com/software/whackagerge',
   },
   {
-    tag: 'ShellHacks 2023',
-    title: 'Themis',
+    tag: 'ShellHacks 2020',
+    title: 'Art Tunes',
     description:
-      'Phishing defense tool that detects AI-generated text, logos, and suspicious email language to help users spot deceptive messages.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Python', 'Google Cloud Vision'],
-    tone: 'pink',
-    github: 'https://github.com/HandHeart/ThemisAIWatch',
-    devpost: 'https://devpost.com/software/best-overall',
-    url: 'https://themis-vision.netlify.app',
+      'Web app that converts images into sound so blind users can experience art and paintings through audio.',
+    tech: ['HTML5', 'CSS', 'JavaScript', 'PHP', 'Bootstrap'],
+    tone: 'gray',
+    github: 'https://github.com/mintyrouge/ArtTunes',
+    url: 'https://arttunes.online/',
+  },
+  {
+    tag: 'PlutoHacks 2019',
+    title: 'PlutoHacks 2019',
+    description:
+      'Winning hackathon submission; project not listed on Devpost.',
+    tech: [],
+    tone: 'gray',
     winner: true,
   },
 ];

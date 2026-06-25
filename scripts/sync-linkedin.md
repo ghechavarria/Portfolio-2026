@@ -31,10 +31,6 @@ Compare LinkedIn → `src/data/portfolioData.js`:
 - [ ] `education[]` — degree, meta, school
 - [ ] `projects[]` — **skip unless** new Featured project on LinkedIn; **never delete** hackathon entries without explicit LinkedIn removal
 
-Compare LinkedIn → `docs/resume.md`:
-
-- [ ] Summary, Skills, Experience, Education, Contact mirror `portfolioData.js` after edits
-
 ## 4. Update
 
 - [ ] Edit only changed fields; keep existing quote style and ordering
@@ -53,7 +49,7 @@ npm run build
 ## 6. Publish (if changes)
 
 - [ ] `git checkout -b linkedin-sync/YYYY-MM-DD`
-- [ ] Stage `src/data/portfolioData.js` and `docs/resume.md` (and `docs/linkedin-sync.md` only if you updated docs)
+- [ ] Stage `src/data/portfolioData.js` (and `docs/linkedin-sync.md` only if you updated docs)
 - [ ] Commit: `sync: update portfolio from LinkedIn (YYYY-MM-DD)`
 - [ ] Push branch and open PR — **do not** commit to main from automation unless explicitly configured
 
