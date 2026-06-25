@@ -2875,10 +2875,11 @@ h1 {
   }
 
   .website-feature {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
   }
 
   .website-launch {
+    grid-column: 2;
     justify-self: start;
   }
 
@@ -2990,6 +2991,16 @@ h1 {
     flex: 0 0 auto;
     padding: 9px 12px;
     font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .website-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .website-launch {
+    grid-column: auto;
   }
 }
 
