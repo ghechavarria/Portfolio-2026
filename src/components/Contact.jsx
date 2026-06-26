@@ -53,9 +53,9 @@ export function Footer() {
         <p className="footer-tagline">Analyst · ERP programmer · Technical developer</p>
         <p className="footer-copy">&copy; {site.name} 2026</p>
         <div className="footer-links">
-          <a href={site.website} target="_blank" rel="noreferrer" aria-label="Portfolio">
+          {/* <a href={site.website} target="_blank" rel="noreferrer" aria-label="Portfolio">
             <ExternalLinkIcon />
-          </a>
+          </a> */}
           <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub">
             <GitHubIcon />
           </a>
